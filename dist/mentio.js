@@ -316,6 +316,7 @@ angular.module('mentio', [])
 
                 // callable both with controller (menuItem) and without controller (local)
                 this.selectItem = $scope.selectItem = function (item) {
+                    $scope.parentMentio.contentEditableMenuPasted = true;
                     $scope.hideMenu();
                     $scope.parentMentio.replaceText($scope.triggerChar, item);
                 };
